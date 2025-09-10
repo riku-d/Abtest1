@@ -48,7 +48,7 @@ export default function CourseCard({ course, isDiscounted, variant }) {
         />
       )}
 
-      {isDiscounted && variant === "B" && <div className="badge">5`0% OFF</div>}
+      {isDiscounted && variant === "B" && <div className="badge">50% OFF</div>}
 
       <h3>{course.title}</h3>
       <div className="muted">
