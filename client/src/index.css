@@ -1,0 +1,155 @@
+/* reset */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f7f8fb;
+  color: #222;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 36px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header .brand { font-weight: 700; font-size: 20px; color: #111; }
+.header .right { display:flex; gap:10px; align-items:center; }
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.login { background: white; color: #5b6bff; border: 1px solid rgba(0,0,0,0.06); }
+.btn.signup { background: #ff6b6b; color: white; }
+
+/* Hero (Udemy-like card) */
+.hero {
+  margin: 28px auto;
+  max-width: 1100px;
+  padding: 40px;
+  border-radius: 26px;
+  background: radial-gradient(1200px 300px at -10% 0%, #ffe8a3 0%, #f7c66b 40%, #f4b557 85%);
+  color: #111;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  min-height: 50vh;
+}
+.hero-left {
+  flex: 1;
+  padding: 6px 20px;
+}
+.hero-left h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.05;
+  color: #1a2234;
+}
+.hero-left p { margin-top: 14px; color: #2a2a2a; max-width: 620px; font-size: 16px; }
+.hero-cta {
+  margin-top: 20px;
+  display:flex; gap:16px; align-items:center;
+}
+.primary-cta {
+  background: linear-gradient(135deg, #6a3cf0, #8d5cf6);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(109, 60, 240, 0.35);
+}
+.primary-cta:hover { filter: brightness(1.05); }
+.price-tag { font-weight: 700; margin-left: 6px; }
+
+/* hero image area (right) */
+.hero-right {
+  width: 360px;
+  height: 220px;
+  
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Courses grid */
+.courses-grid {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 18px;
+  padding: 0 18px 48px;
+}
+
+/* Card */
+.course-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(14,14,20,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.course-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,14,20,0.10); }
+.course-card .badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff3b30;
+  color: white;
+  font-weight: 800;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 0 6px 16px rgba(255,59,48,0.35);
+}
+.course-card h3 { margin: 0 0 8px 0; font-size: 20px; }
+.course-card .muted { color: #555; margin-bottom: 10px; }
+.course-card .price {
+  font-weight: 800; font-size: 20px; margin-top: 6px;
+}
+.course-card .original {
+  color: #9aa0b4; margin-right: 8px; font-weight: 600;
+}
+.course-card .actions { margin-top: 14px; display:flex; gap:10px; align-items:center; }
+.btn.secondary { background: #111827; color: white; padding: 9px 14px; border-radius: 10px; }
+.btn.secondary:hover { filter: brightness(1.08); }
+
+/* Details page cards (What you'll learn) */
+.learning-grid {
+  max-width: 1100px;
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 18px;
+  padding: 0 18px 48px;
+}
+.learn-card {
+  background: white; border-radius: 12px; padding: 18px; box-shadow: 0 6px 18px rgba(14,14,20,0.06);
+}
+.learn-card h4 { margin: 0 0 8px 0; font-size: 18px; }
+.learn-card p { margin: 0; color: #444; }
+
+/* Analytics */
+.analytics {
+  max-width: 900px; margin: 28px auto; background: white; padding: 18px; border-radius: 12px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 880px) {
+  .hero { flex-direction: column; align-items: stretch; }
+  .hero-right { width: 100%; height: 200px; }
+}
